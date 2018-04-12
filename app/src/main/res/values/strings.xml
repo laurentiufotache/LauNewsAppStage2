@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lau News App - S1</string>
+    <string name="no_news_error">No news found!</string>
+    <string name="no_internet_connection_error">There is no internet connection.</string>
+</resources>
