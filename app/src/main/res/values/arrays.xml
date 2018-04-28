@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_order_by_labels">
+        <item>@string/settings_order_by_newest_date_label</item>
+        <item>@string/settings_order_by_oldest_date_label</item>
+        <item>@string/settings_order_by_relevance_label</item>
+    </string-array>
+
+    <string-array name="settings_order_by_values">
+        <item>@string/settings_order_by_newest_date_value</item>
+        <item>@string/settings_order_by_oldest_date_value</item>
+        <item>@string/settings_order_by_relevance_value</item>
+    </string-array>
+
+    <string-array name="settings_sort_by_labels">
+        <item>@string/settings_sort_by_all_news_label</item>
+        <item>@string/settings_sort_by_technology_label</item>
+        <item>@string/settings_sort_by_sport_label</item>
+        <item>@string/settings_sort_by_music_label</item>
+        <item>@string/settings_sort_by_books_label</item>
+        <item>@string/settings_sort_by_film_label</item>
+        <item>@string/settings_sort_by_education_label</item>
+        <item>@string/settings_sort_by_world_news_label</item>
+        <item>@string/settings_sort_by_business_label</item>
+        <item>@string/settings_sort_by_fashion_label</item>
+        <item>@string/settings_sort_by_politics_label</item>
+    </string-array>
+
+    <string-array name="settings_sort_by_values">
+        <item>@string/settings_sort_by_all_news_value</item>
+        <item>@string/settings_sort_by_technology_value</item>
+        <item>@string/settings_sort_by_sport_value</item>
+        <item>@string/settings_sort_by_music_value</item>
+        <item>@string/settings_sort_by_books_value</item>
+        <item>@string/settings_sort_by_film_value</item>
+        <item>@string/settings_sort_by_education_value</item>
+        <item>@string/settings_sort_by_world_news_value</item>
+        <item>@string/settings_sort_by_business_value</item>
+        <item>@string/settings_sort_by_fashion_value</item>
+        <item>@string/settings_sort_by_politics_value</item>
+    </string-array>
+</resources>
