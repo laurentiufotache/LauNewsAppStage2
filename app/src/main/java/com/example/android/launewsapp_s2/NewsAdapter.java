@@ -1,4 +1,4 @@
-package com.example.android.launewsapp_s1;
+package com.example.android.launewsapp_s2;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -78,7 +78,7 @@ public class NewsAdapter extends ArrayAdapter<News> {
 
         // Extract, format and display the current date news
         SimpleDateFormat dateFormatJSON = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US);
-        SimpleDateFormat myDateFormat = new SimpleDateFormat("MMM dd, yyyy", Locale.US);
+        SimpleDateFormat myDateFormat = new SimpleDateFormat("dd MMM yyyy, HH:mm", Locale.US);
 
         try {
             Date dateNews = dateFormatJSON.parse(currentNews.getDate());

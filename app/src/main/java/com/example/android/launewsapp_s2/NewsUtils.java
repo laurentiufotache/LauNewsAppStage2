@@ -1,4 +1,4 @@
-package com.example.android.launewsapp_s1;
+package com.example.android.launewsapp_s2;
 
 import android.text.TextUtils;
 import android.util.Log;

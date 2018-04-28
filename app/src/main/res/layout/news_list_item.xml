@@ -6,47 +6,46 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/newsTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/newsTitle"
-        android:textColor="@color/colorPrimaryDark"
-        android:textStyle="bold"
-        android:layout_marginTop="@dimen/top"
         android:layout_marginLeft="@dimen/left_and_right"
+        android:layout_marginTop="@dimen/top"
         android:text="News Title"
-        />
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/newsAuthor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/top"
-        android:layout_marginRight="@dimen/left_and_right"
-        android:text="Author:"
-        android:textStyle="italic"
-        android:textColor="@color/colorPrimaryDark"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/newsTitle"
-        android:layout_alignParentRight="true"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/newsCategory"
-        android:layout_marginLeft="@dimen/left_and_right"
-        android:layout_marginBottom="@dimen/top"
-        android:textColor="@color/colorPrimaryDark"
-        android:text="News Category:"
-        android:layout_below="@+id/newsAuthor"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/newsDate"
-        android:textColor="@color/colorPrimaryDark"
         android:layout_marginRight="@dimen/left_and_right"
-        android:layout_marginBottom="@dimen/top"
-        android:text="Date:"
+        android:layout_marginTop="@dimen/top"
+        android:text="Author:"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/newsCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/newsAuthor"
-        android:layout_alignParentRight="true"/>
+        android:layout_marginBottom="@dimen/top"
+        android:layout_marginLeft="@dimen/left_and_right"
+        android:text="News Category:"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/newsDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/newsAuthor"
+        android:layout_marginBottom="@dimen/top"
+        android:layout_marginRight="@dimen/left_and_right"
+        android:text="Date:"
+        android:textColor="@color/colorPrimaryDark" />
 
 </RelativeLayout>

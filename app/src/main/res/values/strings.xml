@@ -1,5 +1,91 @@
 <resources>
-    <string name="app_name">Lau News App - S1</string>
+    <string name="app_name">Lau News App - S2</string>
     <string name="no_news_error">No news found!</string>
     <string name="no_internet_connection_error">There is no internet connection.</string>
+
+    <!-- SettingsActivity strings-->
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">News Settings</string>
+
+    <!--Strings to be used for the Preference Labels-->
+    <string name="nr_of_news_label">Number Of News (200 is the maximum value)</string>
+    <string name="nr_of_news" translatable="false">nr_of_news</string>
+    <string name="nr_of_news_default" translatable="false">30</string>
+
+    <!-- Strings For Order-By Preference [CHAR LIMIT=30] -->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_newest_date_value</string>
+
+    <!-- Label for order-by newest news option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_newest_date_label">Newest</string>
+    <string name="settings_order_by_newest_date_value" translatable="false">newest</string>
+
+    <!-- Label for order-by oldest news option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_oldest_date_label">Oldest</string>
+    <string name="settings_order_by_oldest_date_value" translatable="false">oldest</string>
+
+    <!-- Label for order-by relevance news option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_relevance_label">Relevance</string>
+    <string name="settings_order_by_relevance_value" translatable="false">relevance</string>
+
+
+    <!-- Strings For Sort-By-Section Preference [CHAR LIMIT=30] -->
+    <string name="settings_sort_by_label">Sort By</string>
+    <string name="settings_sort_by_key" translatable="false">sort_by</string>
+    <string name="settings_sort_by_default" translatable="false">@string/settings_sort_by_all_news_value</string>
+
+    <!-- Label for sort-by news section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_all_news_label">All news</string>
+    <string name="settings_sort_by_all_news_value" translatable="false">all</string>
+
+    <!-- Label for sort-by technology section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_technology_label">Technology</string>
+    <string name="settings_sort_by_technology_value" translatable="false">technology</string>
+
+    <!-- Label for sort-by sport section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_sport_label">Sport</string>
+    <string name="settings_sort_by_sport_value" translatable="false">sport</string>
+
+    <!-- Label for sort-by music section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_music_label">Music</string>
+    <string name="settings_sort_by_music_value" translatable="false">music</string>
+
+    <!-- Label for sort-by books section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_books_label">Books</string>
+    <string name="settings_sort_by_books_value" translatable="false">books</string>
+
+    <!-- Label for sort-by film section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_film_label">Film</string>
+    <string name="settings_sort_by_film_value" translatable="false">film</string>
+
+    <!-- Label for sort-by education section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_education_label">Education</string>
+    <string name="settings_sort_by_education_value" translatable="false">education</string>
+
+    <!-- Label for sort-by world news section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_world_news_label">World news</string>
+    <string name="settings_sort_by_world_news_value" translatable="false">world</string>
+
+    <!-- Label for sort-by business section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_business_label">Business</string>
+    <string name="settings_sort_by_business_value" translatable="false">business</string>
+
+    <!-- Label for sort-by fashion section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_fashion_label">Fashion</string>
+    <string name="settings_sort_by_fashion_value" translatable="false">fashion</string>
+
+    <!-- Label for sort-by politics section [CHAR LIMIT=20] -->
+    <string name="settings_sort_by_politics_label">Politics</string>
+    <string name="settings_sort_by_politics_value" translatable="false">politics</string>
+
+    <string name="my_key">c9e8c1f0-c76d-43bb-95fc-b13d7474e0ac</string>
+    <string name="all">all</string>
+    <string name="section">section</string>
+    <string name="show_tags">show-tags</string>
+    <string name="author">contributor</string>
+    <string name="order_by">order-by</string>
+    <string name="sort_by">page-size</string>
+    <string name="api_key">api-key</string>
+
 </resources>

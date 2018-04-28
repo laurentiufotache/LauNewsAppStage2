@@ -1,14 +1,18 @@
-package com.example.android.launewsapp_s1;
+package com.example.android.launewsapp_s2;
 
 import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -20,7 +24,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<News>> {
 
     private static final String GUARDIAN_NEWS_REQUEST_URL =
-            "https://content.guardianapis.com/search?show-tags=contributor&api-key=c9e8c1f0-c76d-43bb-95fc-b13d7474e0ac";
+            "https://content.guardianapis.com/search?";
 
     // Constant value for the news loader ID. We can choose any integer.
     private static final int NEWS_LOADER_ID = 1;
@@ -98,8 +102,42 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public Loader<List<News>> onCreateLoader(int id, Bundle args) {
-        // Create a new loader for the given URL
-        return new NewsLoader(this, GUARDIAN_NEWS_REQUEST_URL);
+        SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+
+        // getString retrieves a String value from the preferences. The second parameter is the default value for this preference.
+        String nr_of_news = sharedPrefs.getString(
+                getString(R.string.nr_of_news),
+                getString(R.string.nr_of_news_default));
+
+        String orderByDate = sharedPrefs.getString(
+                getString(R.string.settings_order_by_key),
+                getString(R.string.settings_order_by_default));
+
+        String sortBySection = sharedPrefs.getString(
+                getString(R.string.settings_sort_by_key),
+                getString(R.string.settings_sort_by_default));
+
+        // parse breaks apart the URI string that's passed into its parameter
+        Uri baseUri = Uri.parse(GUARDIAN_NEWS_REQUEST_URL);
+
+        // buildUpon prepares the baseUri that we just parsed so we can add query parameters to it
+        Uri.Builder uriBuilder = baseUri.buildUpon();
+
+        // Append query parameter and its value.
+
+        //for all news category tag is not aplly
+        if (!sortBySection.equals(getString(R.string.all))) {
+            uriBuilder.appendQueryParameter(getString(R.string.section), sortBySection);
+        }
+
+        uriBuilder.appendQueryParameter(getString(R.string.show_tags), getString(R.string.author));
+        uriBuilder.appendQueryParameter(getString(R.string.order_by), orderByDate);
+        uriBuilder.appendQueryParameter(getString(R.string.sort_by), nr_of_news);
+        uriBuilder.appendQueryParameter(getString(R.string.api_key), getString(R.string.my_key));
+
+
+        // Return the completed uri
+        return new NewsLoader(this, uriBuilder.toString());
     }
 
     @Override
@@ -126,5 +164,24 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         // Loader reset, so we can clear out our existing data.
         newsAdapter.clear();
+    }
+
+    @Override
+    // This method initialize the contents of the Activity's options menu.
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the Options Menu we specified in XML
+        getMenuInflater().inflate(R.menu.main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.action_settings) {
+            Intent settingsIntent = new Intent(this, SettingsActivity.class);
+            startActivity(settingsIntent);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }

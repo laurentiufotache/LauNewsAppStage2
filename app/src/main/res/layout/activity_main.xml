@@ -8,8 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:dividerHeight="0dp"
-        android:orientation="vertical"
-       />
+        android:orientation="vertical" />
 
     <!-- Empty view is only visible when the list has no items. -->
     <TextView
@@ -17,8 +16,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:textAppearance="?android:textAppearanceMedium"
-        android:text="No data to display"/>
+        android:text="No data to display"
+        android:textAppearance="?android:textAppearanceMedium" />
 
     <!-- Loading indicator is only shown before the first load -->
     <ProgressBar
@@ -26,6 +25,6 @@
         style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>
